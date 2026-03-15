@@ -22,7 +22,7 @@ export function TimelineSlide({ slide, slideNumber }) {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
           <div className="space-y-8">
             {slide.events.map((event, index) => (
-              <div 
+              <div
                 key={index}
                 className={`relative flex items-center gap-6 md:gap-8 animate-in fade-in slide-in-from-bottom-4 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
@@ -48,7 +48,7 @@ export function TimelineSlide({ slide, slideNumber }) {
       {slide.deadTech && (
         <div className="space-y-4">
           {slide.deadTech.map((tech, index) => (
-            <div 
+            <div
               key={index}
               className="flex items-start gap-4 p-5 bg-card border border-border rounded-lg animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -64,6 +64,8 @@ export function TimelineSlide({ slide, slideNumber }) {
                   </span>
                 </div>
                 <p className="text-muted-foreground">{tech.reason}</p>
+                <p className="text-muted-foreground">---------------</p>
+                <p className="text-muted-foreground">{tech.explanation}</p>
               </div>
             </div>
           ))}
