@@ -1,6 +1,6 @@
 "use client"
 
-import { 
+import {
   Globe, Users, History, Zap, ThumbsUp, Monitor, Server, Layers, Palette, Cloud, CheckCircle,
   Clock, Smartphone, Lock, Type, Eye, Compass, Accessibility, Code, ExternalLink, Sparkles,
   AlertTriangle, Quote, TrendingUp, BookOpen, Terminal, Wrench, X, Check, Lightbulb, Info,
@@ -49,7 +49,7 @@ export function ContentSlide({ slide, slideNumber }) {
           {slide.items.map((item, index) => {
             const Icon = iconMap[item.icon] || Globe
             return (
-              <div 
+              <div
                 key={index}
                 className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg animate-in fade-in slide-in-from-left-4"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -70,7 +70,7 @@ export function ContentSlide({ slide, slideNumber }) {
           {slide.roles.map((role, index) => {
             const Icon = iconMap[role.icon] || Users
             return (
-              <div 
+              <div
                 key={index}
                 className="bg-card border border-border rounded-lg p-5 animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 80}ms` }}
@@ -94,7 +94,7 @@ export function ContentSlide({ slide, slideNumber }) {
         <div className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {slide.aiTools.map((tool, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card border border-border rounded-lg p-5 animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -124,7 +124,7 @@ export function ContentSlide({ slide, slideNumber }) {
       {slide.disasters && (
         <div className="space-y-3 max-h-[60vh] overflow-y-auto pr-2">
           {slide.disasters.map((disaster, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-border rounded-lg p-4 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 80}ms` }}
@@ -156,7 +156,7 @@ export function ContentSlide({ slide, slideNumber }) {
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {slide.devtools.map((tool, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card border border-border rounded-lg p-4 animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 80}ms` }}
@@ -167,7 +167,7 @@ export function ContentSlide({ slide, slideNumber }) {
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">{tool.desc}</p>
                 <div className="bg-secondary/50 px-3 py-2 rounded text-xs text-foreground mb-2">
-                  <span className="text-muted-foreground">Пример: </span>{tool.useCase}
+                  <span className="text-muted-foreground">Օրինակ: </span>{tool.useCase}
                 </div>
                 {tool.demo && (
                   <div className="bg-primary/10 px-3 py-2 rounded text-xs text-primary">
@@ -181,7 +181,7 @@ export function ContentSlide({ slide, slideNumber }) {
             <div className="flex items-center gap-3 bg-primary/10 border border-primary/20 rounded-lg p-4">
               <Wrench className="w-5 h-5 text-primary flex-shrink-0" />
               <div>
-                <span className="text-sm text-muted-foreground">Как открыть: </span>
+                <span className="text-sm text-muted-foreground">Ինչպես բացել: </span>
                 <code className="text-primary font-mono font-bold">{slide.howToOpen}</code>
               </div>
             </div>
@@ -198,7 +198,7 @@ export function ContentSlide({ slide, slideNumber }) {
       {slide.codeExamples && (
         <div className="space-y-4 max-h-[62vh] overflow-y-auto pr-2">
           {slide.codeExamples.map((example, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-border rounded-lg overflow-hidden animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -217,7 +217,7 @@ export function ContentSlide({ slide, slideNumber }) {
                 <div className="p-3">
                   <div className="flex items-center gap-2 mb-2">
                     <X className="w-4 h-4 text-destructive" />
-                    <span className="text-xs font-medium text-destructive">Плохо</span>
+                    <span className="text-xs font-medium text-destructive">Վատ է</span>
                   </div>
                   <pre className="bg-destructive/10 border border-destructive/20 rounded-lg p-2 overflow-x-auto text-xs">
                     <code className="text-foreground whitespace-pre">{example.bad}</code>
@@ -227,7 +227,7 @@ export function ContentSlide({ slide, slideNumber }) {
                 <div className="p-3">
                   <div className="flex items-center gap-2 mb-2">
                     <Check className="w-4 h-4 text-primary" />
-                    <span className="text-xs font-medium text-primary">Хорошо</span>
+                    <span className="text-xs font-medium text-primary">Լավ է</span>
                   </div>
                   <pre className="bg-primary/10 border border-primary/20 rounded-lg p-2 overflow-x-auto text-xs">
                     <code className="text-foreground whitespace-pre">{example.good}</code>
@@ -258,7 +258,7 @@ export function ContentSlide({ slide, slideNumber }) {
           )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-h-[50vh] overflow-y-auto pr-2">
             {slide.patterns.map((pattern, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card border border-border rounded-lg p-4 animate-in fade-in slide-in-from-bottom-4"
                 style={{ animationDelay: `${index * 80}ms` }}
@@ -269,11 +269,11 @@ export function ContentSlide({ slide, slideNumber }) {
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">{pattern.desc}</p>
                 <div className="bg-destructive/10 px-2 py-1.5 rounded text-xs text-foreground mb-2">
-                  <span className="text-destructive font-medium">Пример: </span>{pattern.example}
+                  <span className="text-destructive font-medium">Օրինակ: </span>{pattern.example}
                 </div>
                 {pattern.howToSpot && (
                   <div className="bg-primary/10 px-2 py-1.5 rounded text-xs text-foreground">
-                    <span className="text-primary font-medium">Как заметить: </span>{pattern.howToSpot}
+                    <span className="text-primary font-medium">Ինչպես նկատել: </span>{pattern.howToSpot}
                   </div>
                 )}
               </div>
@@ -291,7 +291,7 @@ export function ContentSlide({ slide, slideNumber }) {
       {slide.stats && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {slide.stats.map((stat, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-border rounded-lg p-6 text-center animate-in fade-in zoom-in-95"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -310,7 +310,7 @@ export function ContentSlide({ slide, slideNumber }) {
           {slide.checklist.map((item, index) => {
             const Icon = iconMap[item.icon] || CheckCircle
             return (
-              <div 
+              <div
                 key={index}
                 className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg animate-in fade-in slide-in-from-left-4"
                 style={{ animationDelay: `${index * 80}ms` }}
@@ -329,7 +329,7 @@ export function ContentSlide({ slide, slideNumber }) {
       {slide.resources && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {slide.resources.map((resource, index) => (
-            <div 
+            <div
               key={index}
               className="flex items-center justify-between p-4 bg-card border border-border rounded-lg animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -341,10 +341,10 @@ export function ContentSlide({ slide, slideNumber }) {
                   <p className="text-sm text-muted-foreground">{resource.desc}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-1 text-primary text-sm">
+              <a target="_blank" href={`https://${resource.url}`} className="flex items-center gap-1 text-primary text-sm">
                 <span className="font-mono">{resource.url}</span>
                 <ExternalLink className="w-4 h-4" />
-              </div>
+              </a>
             </div>
           ))}
         </div>
@@ -354,7 +354,7 @@ export function ContentSlide({ slide, slideNumber }) {
       {slide.takeaways && (
         <div className="space-y-4">
           {slide.takeaways.map((takeaway, index) => (
-            <div 
+            <div
               key={index}
               className="flex items-center gap-4 p-4 bg-card border border-border rounded-lg animate-in fade-in slide-in-from-left-4"
               style={{ animationDelay: `${index * 100}ms` }}

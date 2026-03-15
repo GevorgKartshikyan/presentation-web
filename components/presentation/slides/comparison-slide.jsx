@@ -20,7 +20,7 @@ export function ComparisonSlide({ slide, slideNumber }) {
       {slide.items && slide.items[0]?.analogy && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {slide.items.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card border border-border rounded-lg p-6 text-center animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -42,7 +42,7 @@ export function ComparisonSlide({ slide, slideNumber }) {
       {slide.myths && (
         <div className="space-y-4">
           {slide.myths.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 100}ms` }}
@@ -66,32 +66,34 @@ export function ComparisonSlide({ slide, slideNumber }) {
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <ThumbsUp className="w-6 h-6 text-primary" />
-              <h3 className="text-xl font-semibold text-foreground">Хороший UX</h3>
+              <h3 className="text-xl font-semibold text-foreground">Լավ UX</h3>
             </div>
             {slide.examples.good.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="p-4 bg-primary/10 border border-primary/20 rounded-lg animate-in fade-in slide-in-from-left-4"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="font-medium text-foreground">{item.company}</div>
                 <div className="text-sm text-muted-foreground">{item.reason}</div>
+                <div className="text-sm text-muted-foreground">{item.details}</div>
               </div>
             ))}
           </div>
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <ThumbsDown className="w-6 h-6 text-destructive" />
-              <h3 className="text-xl font-semibold text-foreground">Плохой UX</h3>
+              <h3 className="text-xl font-semibold text-foreground">Վատ UX</h3>
             </div>
             {slide.examples.bad.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="p-4 bg-destructive/10 border border-destructive/20 rounded-lg animate-in fade-in slide-in-from-right-4"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="font-medium text-foreground">{item.company}</div>
                 <div className="text-sm text-muted-foreground">{item.reason}</div>
+                <div className="text-sm text-muted-foreground">{item.details}</div>
               </div>
             ))}
           </div>
@@ -104,16 +106,16 @@ export function ComparisonSlide({ slide, slideNumber }) {
           <div className="grid grid-cols-12 gap-4 text-sm font-medium text-muted-foreground pb-2 border-b border-border">
             <div className="col-span-4 flex items-center gap-2">
               <X className="w-4 h-4 text-destructive" />
-              Плохо
+                Վատ է
             </div>
             <div className="col-span-4 flex items-center gap-2">
               <Check className="w-4 h-4 text-primary" />
-              Хорошо
+                Լավ է
             </div>
-            <div className="col-span-4">Почему важно</div>
+            <div className="col-span-4">Ինչո՞ւ է դա կարևոր։</div>
           </div>
           {slide.practices.map((item, index) => (
-            <div 
+            <div
               key={index}
               className="grid grid-cols-12 gap-4 items-center py-4 border-b border-border/50 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 80}ms` }}

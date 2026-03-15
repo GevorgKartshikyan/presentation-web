@@ -34,7 +34,7 @@ export function NavigationBar({
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
-          
+
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="min-w-[100px]">
@@ -57,7 +57,7 @@ export function NavigationBar({
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-          
+
           <Button
             variant="outline"
             size="icon"
@@ -71,9 +71,9 @@ export function NavigationBar({
 
         <div className="hidden md:flex items-center gap-4 text-sm text-muted-foreground">
           <kbd className="px-2 py-1 bg-secondary rounded text-xs">Space</kbd>
-          <span>или</span>
+          <span>կամ</span>
           <kbd className="px-2 py-1 bg-secondary rounded text-xs">Arrow Keys</kbd>
-          <span>для навигации</span>
+          <span>նավիգացիայի համար</span>
         </div>
 
         <div className="flex items-center gap-2">
@@ -82,17 +82,17 @@ export function NavigationBar({
             size="icon"
             onClick={onToggleNotes}
             aria-label="Toggle speaker notes"
-            title="Заметки спикера (N)"
+            title="Խոսնակի նշումներ (N)"
           >
             <StickyNote className="w-5 h-5" />
           </Button>
-          
+
           <Button
             variant="outline"
             size="icon"
             onClick={onToggleFullscreen}
             aria-label="Toggle fullscreen"
-            title="Полноэкранный режим (F)"
+            title="Լիաէկրան ռեժիմ (F11)"
           >
             {isFullscreen ? (
               <Minimize2 className="w-5 h-5" />

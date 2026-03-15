@@ -1,15 +1,18 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Noto_Sans_Armenian } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const noto = Noto_Sans_Armenian({
+  subsets: ['armenian'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Web Development 101 - Training Presentation',
-  description: 'Interactive presentation about web development fundamentals',
-  generator: 'v0.app',
+  title: 'Վեբ մշակում - Ուսուցողական ներկայացում',
+  description: 'Ինտերակտիվ ներկայացում վեբ մշակման հիմունքների վերաբերյալ',
+  generator: 'Gevorg Kartshikyan',
   icons: {
     icon: [
       {
@@ -30,16 +33,16 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
-        {children}
-        <Analytics />
+      <html lang="hy">
+      <body className={`${noto.className} antialiased`}>
+      {children}
+      <Analytics />
       </body>
-    </html>
+      </html>
   )
 }

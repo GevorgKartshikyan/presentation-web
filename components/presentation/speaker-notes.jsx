@@ -8,12 +8,12 @@ export function SpeakerNotes({ notes, duration }) {
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2 text-sm font-medium text-foreground">
           <MessageSquare className="w-4 h-4 text-primary" />
-          Заметки спикера
+            Խոսնակի նշումներ
         </div>
         {duration && (
           <div className="flex items-center gap-1 text-xs text-muted-foreground">
             <Clock className="w-3 h-3" />
-            ~{duration} мин
+            ~{duration} րոպե
           </div>
         )}
       </div>
