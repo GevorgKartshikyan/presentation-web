@@ -120,7 +120,7 @@ export function ComparisonSlide({ slide, slideNumber }) {
               className="grid grid-cols-12 gap-4 items-center py-4 border-b border-border/50 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: `${index * 80}ms` }}
             >
-              <div className="col-span-4 text-destructive/80 line-through decoration-destructive/40">
+              <div className="col-span-4 text-destructive/80 decoration-destructive/40">
                 {item.bad}
               </div>
               <div className="col-span-4 text-primary font-medium">
